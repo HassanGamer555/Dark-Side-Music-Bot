@@ -3,7 +3,7 @@ const client = new Discord.Client();
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-   client.user.setActivity("YTC$play",{type: 'PLAYING'})
+   client.user.setActivity("DS$",{type: 'PLAYING'})
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -37,7 +37,7 @@ const queue = new Map();
  
  
  
-var prefix = "DR$" 
+var prefix = "DS$" 
 client.on('message', async msg => {
     if (msg.author.bot) return undefined;
    
@@ -229,7 +229,7 @@ function play(guild, song) {
     serverQueue.textChannel.send(`بدء تشغيل : **${song.title}**`);
 }
  
-const adminprefix = "DRVIP$";
+const adminprefix = "DSVIP$";
 const devs = ['274923685985386496'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
@@ -255,20 +255,20 @@ if (message.content.startsWith(adminprefix + 'setT')) {
  
 });
 client.on("message", message => {
-    if (message.content === `DR$help`) {
+    if (message.content === `DS$help`) {
   const embed = new Discord.RichEmbed()
       .setColor("#00ffe9")
       .setFooter('By HassanGamer_555#2924')
       .setDescription(`
 =-=-=-=-=-= 🎧 Music Commands - اوامر الاغاني 🎧 =-=-=-=-=-=
-🎵 DR$play ===> لتشغيل أغنية برآبط أو بأسم
-🎵 DR$skip ===> لتجآوز الأغنية الحآلية
-🎵 DR$stop ===> إيقآف الأغنية مؤقتا
-🎵 DR$resume=> لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-🎵 DR$vol ====> لتغيير درجة الصوت 100 - 0
-🎵 DR$leave ==> لإخرآج البوت من الروم
-🎵 DR$np ====> لمعرفة الأغنية المشغلة حآليا
-🎵 DR$queue => لمعرفة قآئمة التشغيل
+🎵 DS$play ===> لتشغيل أغنية برآبط أو بأسم
+🎵 DS$skip ===> لتجآوز الأغنية الحآلية
+🎵 DS$stop ===> إيقآف الأغنية مؤقتا
+🎵 DS$resume=> لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+🎵 DS$vol ====> لتغيير درجة الصوت 100 - 0
+🎵 DS$leave ==> لإخرآج البوت من الروم
+🎵 DS$np ====> لمعرفة الأغنية المشغلة حآليا
+🎵 DS$queue => لمعرفة قآئمة التشغيل
 ===============================================
  `)
    message.channel.sendEmbed(embed)
